@@ -1,0 +1,49 @@
+<!--miniprogram/pages/user.wxml-->
+<view class = "background">
+  <view class="userinfo" bindtap="v">
+    <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
+      <view class="userinfo-block-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button 
+        wx:if="{{canIUseGetUserProfile}}" 
+        bindtap="getUserProfile"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+        size="default"
+      ></button>
+      <button
+        wx:else
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+        size="default"
+      ></button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    </block>
+    <text>我的信息</text>
+  </view>
+  <view class="userinfo" bindtap="checkAdmin">
+    <!-- <view class="text_image" bindtap='editMgs'>
+      <image class="icon" src="../../images/usermgs.png"></image>
+      <text>我的信息</text>
+      <image class="icon" src="../../images/in.png"></image>
+    </view> -->
+    <view class="fenge2"></view>
+    <!-- <navigator hoverClass="navigator-hover" url="../about/about">
+      <view class="text_image">
+        <image class="png" src="../../images/about.png"></image>
+        <text>关于助手</text>
+        <image class="in" src="../../images/in.png"></image>
+      </view>
+    </navigator> -->
+    <image class="userinfo-avatar" src="../../images/in.png"></image>
+    <text>管理模式</text>
+    
+  </view>    
+</view>

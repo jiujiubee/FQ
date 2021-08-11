@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "FQ 舞蹈工作室",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#191919",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "text": "今日课程",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "人",
+        "pagePath": "pages/user/user"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "enablePullDownRefresh": true
+}

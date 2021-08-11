@@ -1,0 +1,19 @@
+<view wx:if="{{classList === undefined}}">加载中</view>
+<view wx:elif="{{classList.length === 0}}">今日无事</view>
+<view wx:else>
+  <view class="list">  
+    <title>今日课程</title>
+    <view class="list-item" wx:for="{{classList}}" wx:for-item="course">
+      <text>{{course.course}}
+      </text>
+      <text>第{{course.class}}节
+      </text>
+      <text>上课时间:{{course.date}}
+      </text>
+      <button wx:if="{{checkList[index] === undefined}}"></button>
+      <button wx:elif="{{checkList[index].checked === false}}" class="unchecked" bindtap="checkIn" data-class-id="{{checkList[index]._id}}" >签到</button>
+      <button wx:else class="checked" bindtap="showChecked">签到</button>
+      <!--text>时长：{{course.duration}}小时</text> -->
+    </view>
+  </view> 
+</view>

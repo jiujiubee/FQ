@@ -1,0 +1,6 @@
+<!--miniprogram/pages/about/about.wxml-->
+<text>miniprogram/pages/about/about.wxml</text>
+<view class ="list">
+  <view class="list-item">
+  </view>
+</view>
